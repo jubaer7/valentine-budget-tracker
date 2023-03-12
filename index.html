@@ -13,22 +13,27 @@
 
 <body>
     <div>
-        <h1 class="text-center fw-bold text-danger">Valentine's Budget: <span> $10000 </span></h1>
+        <h1 class="text-center fw-bold text-danger">Valentine's Budget: <span> $5000 </span></h1>
     </div>
-
+    <!-- The container for the shopping items -->
     <div class="shop-container d-flex gap-5">
+        <!-- The container for the flower bouquets item -->
         <div class="flowers p-2 box">
             <img class="logo" src="images/product_images/flower-bouquets.png" alt="">
+            <!-- The name for the flower bouquets item -->
             <h6>Flowers-Bouquet</h6>
-            <h5>Price: <span id="flower-price">$1250</span></h5>
+            <!-- The price for the flower bouquets item -->
+            <h5>Price: <span id="flower-price"> $60.98</span></h5>
+            <!-- The input field for the quantity of flower bouquets item -->
             <input id="flower-quantity" type="number" placeholder="Enter the quantity" /><br />
+            <!-- The button to add the flower bouquets item to the cart -->
             <button id="flower-buy-btn">Add to cart</button>
         </div>
 
         <div class="kitkat p-2 box">
             <img class="logo" src="images/product_images/kitkat.png" alt="">
             <h6>Kitkat Chocolates</h6>
-            <h5>Price: <span id="kitkat-price">$220</span></h5>
+            <h5>Price: <span id="kitkat-price">$12.70</span></h5>
             <input id="kitkat-quantity" type="number" placeholder="Enter the quantity" /><br />
             <button id="kitkat-buy-btn">Add to cart</button>
         </div>
@@ -36,24 +41,26 @@
         <div class="cosmetics p-2 box">
             <img class="logo" src="images/product_images/cosmetics.png" alt="">
             <h6>Cosmetics</h6>
-            <h5>Price: <span id="cosmetics-price">$2000</span></h5>
+            <h5>Price: <span id="cosmetics-price">$39.95</span></h5>
             <input id="cosmetics-quantity" type="number" placeholder="Enter the quantity" /><br />
             <button id="cosmetics-buy-btn">Add to cart</button>
         </div>
 
         <div class="perfume p-2 box">
-            <img class="logo" src="images/product_images/perfume.png" alt="">
+            <img class="logo" src="images/product_images/female_perfume.png" alt="">
             <h6>Perfume</h6>
-            <h5>Price: <span id="perfume-price">$950</span></h5>
+            <h5>Price: <span id="perfume-price">$35.99</span></h5>
             <input id="perfume-quantity" type="number" placeholder="Enter the quantity" /><br />
             <button id="perfume-buy-btn">Add to cart</button>
         </div>
     </div>
 
+    <!--This is the checkout page for a shopping website-->
     <div class="container mt-5">
         <h1 class="text-center mb-5">Checkout</h1>
         <table class="table table-bordered">
             <thead>
+                <!--Table header with columns Item, Quantity, Cost-->
                 <tr>
                     <th scope="col">Item</th>
                     <th scope="col">Quantity</th>
@@ -61,6 +68,7 @@
                 </tr>
             </thead>
             <tbody>
+                <!--Table rows for each item with its quantity and cost-->
                 <tr>
                     <td>Flowers</td>
                     <td><span id="flower-bouquet">0</span></td>
@@ -81,6 +89,7 @@
                     <td><span id="perfume">0</span></td>
                     <td>$<span id="perfume-cost">0</span></td>
                 </tr>
+                <!--Table row for displaying the total cost-->
                 <tr>
                     <td colspan="2"><strong>Total Cost</strong></td>
                     <td><strong>$<span id="total-cost">0</span></strong></td>
