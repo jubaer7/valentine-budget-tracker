@@ -13,12 +13,12 @@
 
 <body>
     <div>
-        <h1 class="text-center fw-bold text-danger">Valentine's Budget: <span> $5000 </span></h1>
+        <h1 class="text-center fw-700 text-danger">Valentine's Budget: <span> $5000 </span></h1>
     </div>
     <!-- The container for the shopping items -->
-    <div class="shop-container d-flex gap-5">
+    <div class="shop-container d-flex gap-3 ">
         <!-- The container for the flower bouquets item -->
-        <div class="flowers p-2 box">
+        <div class="flowers p-2 box border-0 ">
             <img class="logo" src="images/product_images/flower-bouquets.png" alt="">
             <!-- The name for the flower bouquets item -->
             <h6>Flowers-Bouquet</h6>
@@ -30,7 +30,7 @@
             <button id="flower-buy-btn">Add to cart</button>
         </div>
 
-        <div class="kitkat p-2 box">
+        <div class="kitkat p-2 box border-0">
             <img class="logo" src="images/product_images/kitkat.png" alt="">
             <h6>Kitkat Chocolates</h6>
             <h5>Price: <span id="kitkat-price">$12.70</span></h5>
@@ -38,7 +38,7 @@
             <button id="kitkat-buy-btn">Add to cart</button>
         </div>
 
-        <div class="cosmetics p-2 box">
+        <div class="cosmetics p-2 box border-0">
             <img class="logo" src="images/product_images/cosmetics.png" alt="">
             <h6>Cosmetics</h6>
             <h5>Price: <span id="cosmetics-price">$39.95</span></h5>
@@ -46,7 +46,7 @@
             <button id="cosmetics-buy-btn">Add to cart</button>
         </div>
 
-        <div class="perfume p-2 box">
+        <div class="perfume p-2 box border-0">
             <img class="logo" src="images/product_images/female_perfume.png" alt="">
             <h6>Perfume</h6>
             <h5>Price: <span id="perfume-price">$35.99</span></h5>
@@ -57,9 +57,9 @@
 
     <!--This is the checkout page for a shopping website-->
     <div class="container mt-5">
-        <h1 class="text-center mb-5">Checkout</h1>
+        <h1 class="text-center mb-5 text-danger header">Checkout</h1>
         <table class="table table-bordered">
-            <thead>
+            <thead class="table-header">
                 <!--Table header with columns Item, Quantity, Cost-->
                 <tr>
                     <th scope="col">Item</th>
@@ -98,11 +98,11 @@
             </tbody>
         </table>
         <div class="promo-code mt-3 text-center p-3">
-            <h5 class="bg-info mt-2">Use Promo Code for 10% discount </h5>
+            <h5 class="bg-danger-subtle mt-2">Use Promo Code for 10% discount </h5>
             <input id="promo-code" class="form-control my-2 w-50 mx-auto" placeholder="101" type="text" />
-            <button id="promoApplyBtn" class="btn btn-primary" type="button">Apply Promo-Code</button>
+            <button id="promoApplyBtn" class="btn btn-danger" type="button">Apply Promo-Code</button>
         </div>
-        <h2 class="text-center mt-5 ">Grand TOTAL: <span id="grand-total">0</span></h2>
+        <h2 class="text-center mt-5 text-danger">Grand TOTAL: <span id="grand-total">0</span></h2>
     </div>
 
     <!-- JavaScript -->

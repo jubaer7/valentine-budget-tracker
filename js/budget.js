@@ -24,7 +24,9 @@ document
     .addEventListener("click", function () {
         const cosmeticsQuantity = getQuantityValue("cosmetics-quantity");
         setInnerText("cosmetics", cosmeticsQuantity);
-        const cosmeticsCost = cosmeticsQuantity * 39.95;
+        const cosmeticsCost = (parseFloat(cosmeticsQuantity) * 39.95).toFixed(
+            2
+        );
         setInnerText("cosmetics-cost", cosmeticsCost);
         totalCost();
     });
@@ -33,16 +35,23 @@ document
     .addEventListener("click", function () {
         const perfumeQuantity = getQuantityValue("perfume-quantity");
         setInnerText("perfume", perfumeQuantity);
-        const perfumeCost = parseFloat(perfumeQuantity) * 35.99;
+        const perfumeCost = (parseFloat(perfumeQuantity) * 35.99).toFixed(2);
         setInnerText("perfume-cost", perfumeCost);
         totalCost();
     });
 
 function totalCost() {
-    const flowerCost = document.getElementById("flower-cost").innerText;
-    const kitkatCost = document.getElementById("kitkat-cost").innerText;
-    const cosmeticsCost = document.getElementById("cosmetics-cost").innerText;
-    const perfumeCost = document.getElementById("perfume-cost").innerText;
+    const flowerCost = parseFloat(
+        document.getElementById("flower-cost").innerText
+    ).toFixed(2);
+    const kitkatCost = parseFloat(
+        document.getElementById("kitkat-cost").innerText
+    ).toFixed(2);
+    const cosmeticsCost = parseFloat(
+        document.getElementById("cosmetics-cost").innerText
+    ).toFixed(2);
+    const perfumeCost = parseFloat(document.getElementById("perfume-cost").innerText).toFixed(2);
+
 
     const totalCost =
         parseFloat(flowerCost) +
